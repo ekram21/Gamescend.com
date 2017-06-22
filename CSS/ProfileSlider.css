@@ -1,0 +1,62 @@
+.slider-container {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+.img-container {
+	border: 4px solid black;
+  	height: 100%;
+  	overflow: hidden;
+  	width: 100%;
+	background: url(http://i.imgur.com/ODlttWU.png), url(http://68.media.tumblr.com/6a8e278cb00badb75fbf42c8179ae1f2/tumblr_inline_o70ubicbA31rtsa5w_540.png), url(http://i.imgur.com/f6GOefI.png);
+	background-size: 20% 80%, 20% 38%, 30% 110% ;
+	background-position: center, 98% 100%, 18% 100%;
+	background-blend-mode: darken, lighten. darken;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	  transition: .5s linear all;
+}
+
+.RadioButtonsContainer{
+	position: absolute;
+    width: 50%;
+    height: 20%;
+    top: 80%;
+}
+
+
+.slider-button-1, .slider-button-2, .slider-button-3 {
+    -webkit-appearance: none;
+    background: linear-gradient(#000000, #000000);
+    border: 1px solid black;
+    border-radius: 100%;
+    opacity:0.5;
+    cursor: pointer;
+    height: 35%;
+    margin: 4% 4%;
+    width: 4%;
+}
+
+.slider-button-1:hover, .slider-button-2:hover, .slider-button-3:hover {
+	opacity: 1;
+}
+
+.slider-button-1:checked, .slider-button-2:checked, .slider-button-3:checked {
+  background: linear-gradient(#6B6B6B, #BFBFBF);
+}
+
+
+.slider-button-1:checked .img-container {
+	background: url(http://38.media.tumblr.com/a63ba683b61b92c929f96011d8ad01a4/tumblr_n6bbhdOcsK1sqmwzro2_500.gif);
+	transition: .5s linear all;
+}
+
+.slider-button-2:checked .img-container {
+	background: url(https://lh3.googleusercontent.com/-LcjYglvoUpg/ViEYoUrw0TI/AAAAAAAAAGU/S3llywscS9A/w426-h240/bloggif_55c960bc9d750.gif);
+	transition: .5s linear all;
+}
+
+.slider-button-3:checked .img-container {
+	background: url(http://33.media.tumblr.com/3c5826cfee4b6c21e83f61a3c6afff3e/tumblr_ne8i3961TY1sfky1xo1_500.gif);
+	transition: .5s linear all;
+}

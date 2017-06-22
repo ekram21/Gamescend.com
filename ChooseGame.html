@@ -1,0 +1,481 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+
+        <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+<!--         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            * { 
+              box-sizing: border-box; 
+            }
+            html {
+              margin: 0;
+              height: 100%;
+            }
+             
+
+            body {
+                margin: 0;
+            background: url(https://wallpaperscraft.com/image/cliffs_destruction_city_landscape_waterfall_69033_1920x1080.jpg);
+                background-size: 100% 100%;
+                background-blend-mode: darken;
+                background-repeat: no-repeat;
+                height: 100%;
+            }
+
+            .MainContainer {
+                width: 80%;
+                height: 100%;
+                margin: 0 auto;
+                -webkit-transition: all 400ms;
+            }
+
+            .FormANDCard_Cont {
+                width: 100%;
+                height: 83%;
+                position: relative;
+                top: 11%;
+                margin: 0 auto;
+                display: table;
+            }
+
+            .HeaderTitle {
+                display: block;
+                position: relative;
+                top: 10%;
+                font-size: 2vw;
+                width: 60%;
+                background-color: rgba(0, 0, 0, .7);
+                opacity: 1;
+                color: white;
+                font-family: 'Cinzel';
+                font-weight: bolder;
+                text-align: center;
+                margin-left: 1%;
+                -webkit-transition: all 400ms;
+            }
+
+            .MainForm {
+                color: white;
+                font-family: 'Cinzel';
+                font-size: 1.5vw;
+                background-color: rgba(0, 0, 0, .7);
+                float: left;
+                width: 35%;
+                height: 91%;
+                margin-left: 1.5%;
+                margin-top: 1%;
+                margin-right: 0;
+                padding: 1%;
+            }
+
+            .SubmitClass {
+                background-color: black;
+                border: 1px solid black;
+                color: white;
+                font-family: 'Cinzel';
+                position: relative;
+                font-size: 120%;
+                width: 100%;
+                top: 30%;
+                -webkit-transition: all 400ms;
+            }
+
+            .SubmitClass:hover {
+                border: 1px solid white;
+                text-shadow: #EEEE00 0 0 15px;
+                cursor: pointer;
+                -webkit-transition: all 400ms;
+            }
+
+            .GameCard {
+                width: 61%;
+                float: right;
+                height: 91%;
+                background-color: rgba(0, 0, 0, .7);
+                margin-top: 1%;
+                margin-left: 0;
+                -webkit-transition: all 400ms;
+            }
+
+            .GameIcon {
+                color: rgba(255, 255, 255, .5);
+                display: inline-block;
+                top: 46%;
+                left: 48%;
+                transform: scale(5, 5);
+                position: relative;
+                -webkit-transition: all 400ms;
+            }
+
+            .GameCard:hover .GameIcon {
+                color: rgba(255, 255, 255, 1);
+                -webkit-transition: all 400ms;
+            }
+
+
+            
+        </style>
+
+
+        <title>Choose Games</title>
+    </head>
+    <body>
+        <div class="MainContainer">
+
+            <div class="HeaderTitle">
+                Choose the Games you are interested in:
+            </div>
+
+
+            <div class="FormANDCard_Cont">
+                
+                <form class="MainForm" action="/action_page.php" method="get">
+
+                  <input type="checkbox" class="LOL_CLASS_CBOX" name="Game1" value="LoL">
+                  <label for="LoL" class="LOL_CLASS_LABEL">League of Legends</label><br>
+
+                  <input type="checkbox" class="OW_CLASS_CBOX" name="Game2" value="OW" >
+                  <label for="OW" class="OW_CLASS_LABEL">Overwatch</label><br>
+
+                  <input type="checkbox" class="HS_CLASS_CBOX" name="Game3" value="HS" >
+                  <label for="HS" class="HS_CLASS_LABEL">Hearthstone</label><br>
+      
+                  <input type="checkbox" class="Hots_CLASS_CBOX" name="Game4" value="Hots" >
+                  <label for="Hots" class="Hots_CLASS_LABEL">Heroes of the Storm</label><br>
+                  
+                  <input type="checkbox" class="DFO_CLASS_CBOX" name="Game5" value="DFO" >
+                  <label for="DFO" class="DFO_CLASS_LABEL">Dungeon Fighter Online</label><br>
+ 
+                  <input type="checkbox" class="Kritika_CLASS_CBOX" name="Game6" value="KritikaO" >
+                  <label for="KritikaO" class="Kritika_CLASS_LABEL">Kritika Online</label><br>
+                  
+                  <input type="checkbox" class="CS_CLASS_CBOX" name="Game7" value="CS" >
+                  <label for="CS" class="CS_CLASS_LABEL">Counter Strike</label><br>
+                  
+                  <input type="checkbox" class="DOTA_CLASS_CBOX" name="Game8" value="Dota" >
+                  <label for="Dota" class="DOTA_CLASS_LABEL">Dota 2</label><br>
+                  
+                  <input type="checkbox" class="BnS_CLASS_CBOX" name="Game9" value="BnS" >
+                  <label for="BnS" class="Bns_CLASS_LABEL">Blade and Soul</label><br>
+                  
+                  <input type="checkbox" class="Tera_CLASS_CBOX" name="Game10" value="Tera" >
+                  <label for="Tera" class="Tera_CLASS_LABEL">Tera</label><br>
+                  
+                  <input type="checkbox" class="MS_CLASS_CBOX" name="Game11" value="MS" >
+                  <label for="MS" class="MS_CLASS_LABEL">Maplestory</label><br>
+
+                  <input type="submit" class="SubmitClass" value="Submit">
+                </form>
+
+                <div class="GameCard"><div class="GameIcon"><i class="fa fa-gamepad"></i></div></div>
+
+            </div>
+            
+        </div>
+
+        <script>
+            jQuery(document).ready(function($) {
+
+
+            $(".OW_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://i.imgur.com/1NGkVrs.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.OW_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.OW_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".OW_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://i.imgur.com/1NGkVrs.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.OW_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.OW_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".LOL_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://i.imgur.com/sf3yBLP.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.LOL_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.LOL_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".LOL_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://i.imgur.com/sf3yBLP.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.LOL_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.LOL_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".HS_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://i.makeagif.com/media/8-11-2015/DCDBBY.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.HS_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.HS_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".HS_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://i.makeagif.com/media/8-11-2015/DCDBBY.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%')
+                   $('.GameCard').css('background-blend-mode', 'lighten')
+                   $('.GameCard').css('background-repeat', 'no-repeat')
+                   $('.HS_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.HS_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".Hots_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://i.imgur.com/NsXX3cn.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.Hots_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.Hots_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".Hots_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://i.imgur.com/NsXX3cn.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.Hots_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.Hots_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".DFO_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://alphabetagamer.3kkpqwvtmi.maxcdn-edge.com/wp-content/uploads/2015/04/dragon-fighters-online.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.DFO_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.DFO_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".DFO_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://alphabetagamer.3kkpqwvtmi.maxcdn-edge.com/wp-content/uploads/2015/04/dragon-fighters-online.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.DFO_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.DFO_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".Kritika_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://share.gifyoutube.com/y4Jgld.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.Kritika_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.Kritika_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".Kritika_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://share.gifyoutube.com/y4Jgld.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.Kritika_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.Kritika_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".CS_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://68.media.tumblr.com/431aae93f56018f384a7a5fe33eeb837/tumblr_nhrsmaSGHV1rsp6dco1_500.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.CS_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.CS_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".CS_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://68.media.tumblr.com/431aae93f56018f384a7a5fe33eeb837/tumblr_nhrsmaSGHV1rsp6dco1_500.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.CS_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.CS_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".DOTA_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://media.giphy.com/media/11MICB2ZmzK036/giphy.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.DOTA_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.DOTA_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".DOTA_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://media.giphy.com/media/11MICB2ZmzK036/giphy.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.DOTA_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.DOTA_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".Bns_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://data.whicdn.com/images/109626952/large.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.Bns_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.Bns_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".Bns_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'http://data.whicdn.com/images/109626952/large.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.Bns_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.Bns_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".Tera_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://www.g2g.com/blog/wp-content/uploads/2016/05/tera-ninja.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.Tera_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.Tera_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".Tera_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://www.g2g.com/blog/wp-content/uploads/2016/05/tera-ninja.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.Tera_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.Tera_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".MS_CLASS_CBOX").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://68.media.tumblr.com/510e88d51be46ca205af12ff5ae3ea62/tumblr_nt364vt2m41svf1odo1_500.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.MS_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.MS_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+            $(".MS_CLASS_LABEL").hover(function(){
+                   $('.GameCard').css('background-image', 'url(' + 'https://68.media.tumblr.com/510e88d51be46ca205af12ff5ae3ea62/tumblr_nt364vt2m41svf1odo1_500.gif' + ')');
+                   $('.GameCard').css('background-size', '100% 100%');
+                   $('.GameCard').css('background-blend-mode', 'lighten');
+                   $('.GameCard').css('background-repeat', 'no-repeat');
+                   $('.MS_CLASS_LABEL').css('text-shadow', '#EEEE00 0 0 25px');
+                   $('.GameIcon').css('display', 'none');
+                 }, function(){
+                    $('.GameCard').css('background-image', 'none');
+                    $('.MS_CLASS_LABEL').css('text-shadow', 'none');
+                    $('.GameIcon').css('display', 'inline-block');
+            });
+
+
+            });
+        </script>
+
+    </body>
+</html>
+
+

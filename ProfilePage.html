@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Profile Page - RandomGuy</title>
+
+        <link rel="stylesheet" type="text/css" href="CSS/ProfilePage.css">
+        <link rel="stylesheet" href="CSS/ProfileSlider.css">
+        <script src="JS/ProfilePage.js"></script>
+
+        <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+
+        <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+
+        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+
+    <div class="ProfilePictureChanger_Container">
+        <input type="text" name="Profile_Image_URL" class="ImageURLField" placeholder="Enter Image URL 250px by 350px"/>
+        <input type="submit" class="Img_URL_Submit" value="Submit">
+    </div>
+
+    <i class="fa fa-times" id="ProfilePic_Changer_Close"></i>
+
+    <div class="TopNavBar">
+
+        <ul>
+          <li><a class="active" href="#home">Profile</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="GamescendNavTitle"><label>Gamescend</label></li>
+
+        </ul>
+        
+    </div>
+
+        <div class="LeftContainer">
+            <div class="MainContainer">
+
+                <div class="ProfilePicture"><i class="fa fa-camera" id="Camera_Icon" aria-hidden="true"></i></div>
+
+                <div class="PersonalInfoContainer">
+
+                    <div class="NameTitle">Selezar</div>
+                    <div class="RankTitle">Rank: Game Master</div>
+                    <div class="SexAgeTitle">23, Male </div>
+                    <div class="LikesTitle">Likes: Memes </div>
+                    <div class="JobTitle">Job: Programmer </div>
+                    <div class="CountryTitle">Based in: Manchester, England</div>
+
+                    <div class="QuoteBox">Favorite Quote:
+                        <div class="MessageTitle"><b>Stand in the ashes of a trillion dead souls and ask the ghosts if honour matters...</b></div>
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+
+            <div class="GameMainContainer">
+                <div class="slider-container">
+
+                    <div class="RadioButtonsContainer">
+                        <input type="radio" name="img-slider" class="slider-button-1" checked> 
+                        <input type="radio" name="img-slider" class="slider-button-2"> 
+                        <input type="radio" name="img-slider" class="slider-button-3">
+                    </div>
+
+                    <div class="img-container">
+                    </div>
+                </div>
+          
+            </div>
+                
+        </div>
+
+        <div class="ActivityContainer">
+            
+        </div>
+
+        <script>
+            jQuery(document).ready(function($) {
+
+                    $('.slider-button-1').click(function() {
+                      console.log("slider 1 clicked");
+                     $(".img-container").css("background-image", "url(https://images2.alphacoders.com/556/556062.jpg)");  
+                   });
+
+                    $('.slider-button-2').click(function() {
+                      console.log("slider 1 clicked");
+                     $(".img-container").css("background-image", "url(https://lh3.googleusercontent.com/-LcjYglvoUpg/ViEYoUrw0TI/AAAAAAAAAGU/S3llywscS9A/w426-h240/bloggif_55c960bc9d750.gif)");  
+                   });
+
+                    $('.slider-button-3').click(function() {
+                      console.log("slider 1 clicked");
+                     $(".img-container").css("background-image", "url(http://www.animenewsnetwork.com/thumbnails/hotlink-crop600x315/herald/37531/persona5banner.png)");  
+                   });
+
+                    $('.ProfilePicture').click(function() {
+                      console.log("picture clicked");
+                           $( ".ProfilePictureChanger_Container" ).animate({
+                                top: "+45%"
+                              }, 100, function() {
+                                // Animation complete.
+                                console.log('animation complete');
+
+                            $( "#ProfilePic_Changer_Close" ).animate({
+                                    top: "+47%"
+                                }, 100, function() {
+                                    // Animation complete.
+                                    console.log('animation complete');
+                                });  
+                        });  
+                    });
+
+                    $('.Img_URL_Submit').click(function() {
+                        var bla = $('.ImageURLField').val();
+                        console.log(bla);
+                        $(".ProfilePicture").css("background-image", "url("+bla+")");  
+
+                        $( ".ProfilePictureChanger_Container" ).animate({
+                                top: "-10%"
+                            }, 100, function() {
+                                // Animation complete.
+                                console.log('animation complete');
+                            });  
+
+                            $( "#ProfilePic_Changer_Close" ).animate({
+                                    top: "-10%"
+                                }, 100, function() {
+                                    // Animation complete.
+                                    console.log('animation complete');
+                                });  
+
+                    });
+
+                    $("#ProfilePic_Changer_Close").click(function() {
+
+                        $( ".ProfilePictureChanger_Container" ).animate({
+                                top: "-10%"
+                            }, 100, function() {
+                                // Animation complete.
+                                console.log('animation complete');
+                            });  
+
+                            $( "#ProfilePic_Changer_Close" ).animate({
+                                    top: "-10%"
+                                }, 100, function() {
+                                    // Animation complete.
+                                    console.log('animation complete');
+                                });  
+
+                      });
+                });
+        </script>
+
+        
+    </body>
+</html>

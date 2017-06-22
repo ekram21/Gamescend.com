@@ -1,0 +1,267 @@
+* { 
+  box-sizing: border-box;  
+}
+html {
+  margin: 0;
+  height: 100%;
+}
+
+input, textarea, select, a { outline: none; }
+ 
+
+body {
+	margin: 0;
+	height: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+/*    background: url(none);
+    background-size: 100% 100%;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;*/
+    transition: 3s;
+}
+
+.LeftContainer {
+	width: 74%;
+    height: 90%;
+    margin-left: 1%;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    float: left;
+    top: 1%;
+    -webkit-transition: all 400ms;	
+}
+
+.MainContainer {
+	width: 100%;
+    height: 49%;
+    position: relative;
+    display: table;
+    background-color: rgba(0, 0, 0, .7);
+    -webkit-transition: all 400ms;
+}
+
+.GameMainContainer {
+    width: 100%;
+    height: 49%;
+    position: relative;
+    display: table;
+    top: 2%;
+    background-color: rgba(0, 0, 0, .7);
+    -webkit-transition: all 400ms;
+}
+
+.ActivityContainer {
+	width: 23%;
+    height: 90%;
+    margin-left: 0%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    float: right;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .7);
+    -webkit-transition: all 400ms;
+}
+
+.ProfilePicture {
+	border: 5px solid black;
+	float: left;
+	width: 22.3%;
+	height: 100%;
+	display: inline-block;
+    background: url(http://img15.deviantart.net/b3d1/i/2014/005/4/f/dante__son_of_sparda_by_anubisdhl-d7129fa.jpg);
+    background-size: 100% 100%;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    -webkit-transition: all 400ms;
+}
+
+#Camera_Icon{
+	display: none;
+    color: white;
+    transform: scale(1.6,1.6);
+    position: relative;
+    top: 47%;
+    left: 45%;
+    -webkit-transition: all 400ms;
+}
+
+#ProfilePic_Changer_Close{
+    display: block;
+    opacity: 1;
+    color: white !important;
+    transform: scale(2.5,2.5);
+    position: absolute;
+    top: -10%;
+    left: 79%;
+    z-index: 10;
+    -webkit-transition: all 400ms;
+}
+
+#ProfilePic_Changer_Close:hover{
+	cursor: pointer;
+	transform: scale(3.0,3.0);
+	-webkit-transition: all 400ms;
+}
+
+
+.ProfilePicture:hover{
+	border: 5px solid #b20000;
+	cursor: pointer;
+	-webkit-transition: all 400ms;
+}
+
+.ProfilePicture:hover #Camera_Icon {
+	display: inline-block;
+	-webkit-transition: all 400ms;
+}
+
+
+.PersonalInfoContainer{
+	float: right;
+	width: 77%;
+	height: 100%;
+	display: inline-block;
+}
+
+.NameTitle {
+    font-size: 4vw;
+    width: 100%;
+    height: 20%;
+    color: white;
+    font-family: 'Cinzel';
+    margin: 0 auto;
+    font-weight: bolder;
+    -webkit-transition: all 400ms;
+}
+
+.SexAgeTitle, .JobTitle, .CountryTitle, .LikesTitle, .RankTitle {
+    font-size: 1.6vw;
+    width: 100%;
+    color: white;
+    font-family: 'Cinzel';
+    margin: 0 auto;
+    -webkit-transition: all 400ms;
+}
+
+.QuoteBox {
+	font-size: 1.2vw;
+    font-weight: bolder;
+    color: white;
+    font-family: 'Cinzel';
+    width: 98%;
+    background-color: rgba(70, 70, 70, 0.5);
+    padding: 1%;
+    margin-top: 1%;
+    -webkit-transition: all 400ms;
+    height: 26%;
+}
+
+.MessageTitle {
+    font-weight: initial;
+    font-size: 1.5vw;
+    width: 100%;
+    color: white;
+    font-family: 'Alegreya';
+    margin: 0 auto;
+    -webkit-transition: all 400ms;
+}
+
+.TopNavBar {
+	font-family: 'Cinzel';
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1e1e1e;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #b20000;
+}
+
+.active {
+    background-color: black;
+}
+
+.GamescendNavTitle{
+	float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ProfilePictureChanger_Container{
+	position: absolute;
+    width: 60%;
+    height: 6%;
+    display: block;
+    top: -10%;
+    left: 18%;
+    z-index: 10;
+    background-color: #b20000;
+    -webkit-transition: all 400ms;
+}
+
+.ImageURLField{
+	font-family: "Cinzel";
+    font-size: 1.1vw;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    height: 64%;
+    margin: 1%;
+    margin-right: 0.5%;
+    margin-bottom: 0.5%;
+    width: 88%;
+    padding: 1%;
+    -webkit-transition: all 400ms;
+}
+
+.Img_URL_Submit{
+    font-family: "Cinzel";
+    font-size: 1.1vw;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    height: 64%;
+    margin-top: 0.5%;
+    width: 9%;
+    -webkit-transition: all 400ms;
+}
+
+.Img_URL_Submit:hover {
+	cursor: pointer;
+	-webkit-transition: all 400ms;
+	border: 1px solid white;
+}
+
+.ProfilePictureChanger_Container:hover {
+	transform: scale(1, 1);
+	-webkit-transition: all 400ms;
+}
+
+.ImageURLField:hover {
+	-webkit-transition: all 400ms;
+}
+
+.ImageURLField:focus{
+  border: 1px solid black;
+}
